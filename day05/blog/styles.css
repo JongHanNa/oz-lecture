@@ -1,0 +1,112 @@
+*styles.css*
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    padding: 1rem;
+}
+
+header {
+    padding: 1rem;
+    border-bottom: 0.1rem solid black;
+    margin-bottom: 1rem;
+}
+
+.post {
+    padding: 1rem;
+    border: 0.1rem solid black;
+    margin-bottom: 1rem;
+}
+
+aside {
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+footer {
+    padding: 1rem;
+    border-top: 0.1rem solid black;
+    margin-top: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+nav ul {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+section {
+    margin: 1vw 0;
+    padding: 2vw 0;
+}
+
+aside {
+    font-size: 0.9rem;
+    line-height: 1.5em;
+}
+
+footer {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Tablet (768px 이상) */
+@media (min-width: 768px) {
+    body {
+        max-width: 90vw;
+        margin: auto;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #posts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    aside {
+        margin: 1.5rem;
+    }
+}
+
+/* Desktop (1024px 이상) */
+@media (min-width: 1024px) {
+    body {
+        max-width: 80vw;
+        margin: auto;
+    }
+
+    #posts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    aside {
+        width: 25vw;
+        margin-left: 2vw;
+    }
+}
