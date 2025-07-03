@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!-- 사용자 등록 폼 페이지 (도전 과제 포함) -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>User Registration Form</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- 헤더: 로고, 제목, SVG 그래픽 포함 -->
+        <header>
+            <div>
+                <!-- 텍스트 로고 -->
+                <span class="logo-text">MySite</span>
+                <!-- SVG 로고 -->
+                <svg width="40" height="40" aria-label="Logo">
+                    <circle
+                        cx="20"
+                        cy="20"
+                        r="18"
+                        stroke="black"
+                        stroke-width="2"
+                        fill="#4e8cff"
+                    />
+                    <rect
+                        x="10"
+                        y="10"
+                        width="20"
+                        height="20"
+                        fill="#fff"
+                        stroke="#4e8cff"
+                        stroke-width="2"
+                    />
+                </svg>
+                <h1>User Registration</h1>
+            </div>
+        </header>
+        <!-- 내비게이션 바 -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Register</a>
+            <a href="#">About</a>
+        </nav>
+        <main>
+            <!-- 메인 컨텐츠(폼) 영역 -->
+            <section>
+                <h2>Registration Form</h2>
+                <!-- 사용자 등록 폼 시작 -->
+                <form id="registration-form" action="#" method="post">
+                    <!-- 이름 입력 -->
+                    <p class="form-group">
+                        <label for="name" class="required">Name:</label>
+                        <input type="text" id="name" name="name" required />
+                    </p>
+                    <!-- 이메일 입력 -->
+                    <p class="form-group">
+                        <label for="email" class="required">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </p>
+                    <!-- 비밀번호 입력 -->
+                    <p class="form-group">
+                        <label for="password" class="required">Password:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                        />
+                    </p>
+                    <!-- 생년월일 입력 -->
+                    <p class="form-group">
+                        <label for="birthdate">Birthdate:</label>
+                        <input
+                            type="date"
+                            id="birthdate"
+                            name="birthdate"
+                            required
+                        />
+                    </p>
+                    <!-- 나이 입력 -->
+                    <p class="form-group">
+                        <label for="age">Age:</label>
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            min="18"
+                            max="100"
+                            required
+                        />
+                    </p>
+                    <!-- 만족도 입력 -->
+                    <p class="form-group">
+                        <label for="satisfaction">Satisfaction (1-10):</label>
+                        <input
+                            type="range"
+                            id="satisfaction"
+                            name="satisfaction"
+                            min="1"
+                            max="10"
+                        />
+                    </p>
+                    <!-- 성별 선택 (라디오 버튼) -->
+                    <p class="form-group">
+                        <label>Gender:</label><br />
+                        <input
+                            type="radio"
+                            id="male"
+                            name="gender"
+                            value="male"
+                            required
+                        />
+                        <label for="male">Male</label>
+                        <input
+                            type="radio"
+                            id="female"
+                            name="gender"
+                            value="female"
+                        />
+                        <label for="female">Female</label>
+                        <input
+                            type="radio"
+                            id="other"
+                            name="gender"
+                            value="other"
+                        />
+                        <label for="other">Other</label>
+                    </p>
+                    <!-- 관심사 선택 (체크박스) -->
+                    <p class="form-group">
+                        <label>Interests:</label><br />
+                        <input
+                            type="checkbox"
+                            id="coding"
+                            name="interests"
+                            value="coding"
+                        />
+                        <label for="coding">Coding</label>
+                        <input
+                            type="checkbox"
+                            id="gaming"
+                            name="interests"
+                            value="gaming"
+                        />
+                        <label for="gaming">Gaming</label>
+                        <input
+                            type="checkbox"
+                            id="reading"
+                            name="interests"
+                            value="reading"
+                        />
+                        <label for="reading">Reading</label>
+                    </p>
+                    <!-- 국가 선택 (드롭다운) -->
+                    <p class="form-group">
+                        <label for="country">Country:</label>
+                        <select id="country" name="country" required>
+                            <option value="kr">South Korea</option>
+                            <option value="us">USA</option>
+                            <option value="jp">Japan</option>
+                            <option value="cn">China</option>
+                            <option value="uk">UK</option>
+                        </select>
+                    </p>
+                    <!-- 제출/초기화 버튼 -->
+                    <p class="form-group">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </p>
+                </form>
+                <!-- 사용자 등록 폼 끝 -->
+            </section>
+            <!-- 사이드바(aside) -->
+            <aside
+                style="
+                    flex: 1;
+                    background: #f5f5f5;
+                    padding: 16px;
+                    border-radius: 8px;
+                "
+            >
+                <h3>Registration Tips</h3>
+                <ul>
+                    <li>Use a valid email address.</li>
+                    <li>Password should be at least 8 characters.</li>
+                    <li>All fields marked as required must be filled.</li>
+                </ul>
+                <!-- SVG 그래픽 예시 -->
+                <svg width="100" height="60">
+                    <rect
+                        x="10"
+                        y="10"
+                        width="80"
+                        height="40"
+                        fill="#b3e5fc"
+                        stroke="#0288d1"
+                        stroke-width="2"
+                    />
+                    <circle cx="50" cy="30" r="15" fill="#0288d1" />
+                </svg>
+                <!-- canvas 태그 (JS 없이, 의도만 주석) -->
+                <canvas width="100" height="40">
+                    <!-- JavaScript로 안내 메시지나 도형을 그릴 수 있습니다. -->
+                </canvas>
+                <!-- 오디오 샘플 -->
+                <h4>Sample Audio</h4>
+                <audio controls>
+                    <source
+                        src="https://www.w3schools.com/html/horse.mp3"
+                        type="audio/mpeg"
+                    />
+                    Your browser does not support the audio element.
+                </audio>
+            </aside>
+        </main>
+        <!-- 안내/설명 article -->
+        <article style="margin: 32px 0 16px 0">
+            <h3>Why Register?</h3>
+            <p>
+                Registering allows you to access exclusive features, receive
+                updates, and participate in our community. Your information is
+                kept secure and private.
+            </p>
+            <!-- canvas 태그 (JS 없이, 의도만 주석) -->
+            <canvas width="200" height="40">
+                <!-- JavaScript로 안내 메시지나 도형을 그릴 수 있습니다. -->
+            </canvas>
+        </article>
+        <!-- 비디오 샘플 (footer 또는 article/aside에 위치 가능) -->
+        <footer
+            style="
+                background: #222;
+                color: #fff;
+                padding: 16px 0;
+                text-align: center;
+            "
+        >
+            <div>
+                <video
+                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                    controls
+                    width="300"
+                >
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p style="margin: 8px 0 0 0">
+                © 2025 Your Website |
+                <a href="#" style="color: #90caf9">Contact</a>
+            </p>
+        </footer>
+    </body>
+</html>
